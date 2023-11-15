@@ -1,21 +1,23 @@
-// const post = {
-//     title: 'foo',
-//     body: 'bar',
-//     userId: 1
-//   };
-  
-//   fetch('https://jsonplaceholder.typicode.com/posts', {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json'
-//     },
-//     body: JSON.stringify(post)
-//   })
-//     .then(response => response.json())
-//     .then(data => console.log(data))
-//     .catch(error => console.error(error));
 
-// function sum(a, b) {
-//     return a + b;
-//   }
-//   module.exports = sum;
+
+
+const auth = async(email, password)=> {
+    const res = await fetch("https://reqres.in/api/user", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        email,
+        password
+    })
+})
+
+const data = await res.json()
+return {email: data.email, password: data.password}
+}
+
+
+module.exports =  auth
+
+
