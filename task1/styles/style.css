@@ -1,0 +1,168 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Inter:wght@400;500;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+
+*, *::after,*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    height: 100vh;
+    background: linear-gradient(144deg, #25078f,#9f0786);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                             
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper_form {
+    position: relative;
+    background-color: white;
+    max-width: 1200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    border-radius: 12px;
+    overflow: hidden;
+    
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    background: url("../img/bg.jpg") no-repeat center / cover;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    background: #330e6373;
+}
+
+.wrapper > h1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 275px;
+    font-size: 42px;
+    color: white;
+}
+
+.block_form {
+    margin: 100px 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    color: #5334ff;
+    font-size: 32px;
+}
+
+form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.post_email, 
+.post_password {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    font-weight: 500;
+}
+
+.post_email > input, 
+.post_password > input {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-bottom: 2px solid #5334ff;
+    outline: none;
+}
+
+.post_email{
+    margin-bottom: 20px;
+}
+
+.other {
+    margin-top: 15px;
+    margin-bottom: 50px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.forgot_password {
+    color: #9857b9;
+    
+}
+
+.btn_submit {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 15px 70px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 175px;
+    background-color: #8c35ff;
+    text-transform: uppercase;
+    transition: all .5s ;
+}
+
+.btn_submit:hover {
+    background-color: rgb(97, 53, 255);
+    transform: scale(1.1)
+}
+
+.create_account {
+    font-size: 14px;
+    color: #5334ff;
+    font-weight: 400;
+}
+
+
+@media screen and (max-width: 1290px) {
+    .wrapper_form  {
+        max-width: 1020px
+    }
+}
+
+@media screen and (max-width: 1060px){
+    .wrapper_form {
+        max-width: 880px;
+    }    
+}
+
+@media screen and (max-width: 910px){
+    .wrapper_form {
+        grid-template-columns: 1fr;
+        max-width: 385px;;
+    }
+
+    .bg {
+        display: none;
+    }
+
+    .other{
+        gap: 55px;
+    }
+
+    .btn_submit {
+        margin-bottom: 110px;
+    }
+}

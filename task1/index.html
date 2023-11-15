@@ -4,9 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    
+    <div class="wrapper_form">
+        <div class="bg">
+            <div class="wrapper">
+                <h1>Welcome back!</h1>
+            </div>
+        </div>
+        <div class="block_form">
+            <h2>Log in</h2>
+
+            <form   >
+                <label for="post-email" class="post_email">
+                    Email:
+                    <input id="post-email" type="email" name="email"  placeholder="email">
+                </label>
+                <label for="post-password" class="post_password">
+                    Password:
+                    <input id="post-password"  type="password" name="password" placeholder="password">
+                </label>
+                <div class="other">
+                    <label for="remember" class="remember">
+                        <input type="checkbox" id="remember">
+                        Remember
+                    </label>
+                    <a href="#" class="forgot_password">Forgot password?</a>
+                </div>
+                <button class="btn_submit" type="submit">Login in</button>
+            </form>
+
+            <a href="№" class="create_account">Create account</a>
+        </div>
+    </div>
     <script src="./main.js" type="module"></script>
 </body>
 </html>

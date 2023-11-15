@@ -16,7 +16,7 @@ const auth = async(email, password)=> {
 const data = await res.json()
 return {email: data.email, password: data.password}
 }
-
+// auth("grogy@gmail.com", "retro2020")
 
 module.exports =  auth
 
